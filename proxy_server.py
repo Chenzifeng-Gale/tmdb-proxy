@@ -7,6 +7,7 @@ import logging
 from typing import Dict, Any, Optional
 import json
 from config import TMDB_BASE_URL, REQUEST_TIMEOUT
+import os
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

@@ -154,7 +154,7 @@ def main():
     
     parser = argparse.ArgumentParser(description="TMDB API 代理中转站")
     parser.add_argument("--host", default="0.0.0.0", help="服务器主机地址")
-    parser.add_argument("--port", type=int, default=6371, help="服务器端口")
+    parser.add_argument("--port", type=int, default=int(os.getenv("PORT", "10000")), help="服务器端口")
     parser.add_argument("--reload", action="store_true", help="开发模式自动重载")
     
     args = parser.parse_args()
